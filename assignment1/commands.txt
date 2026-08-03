@@ -1,0 +1,53 @@
+mkdir workspace 
+cd workspace
+mkdir assignments
+cd assignments
+
+TASK 1
+
+  mkdir test_dir
+  cd test_dir
+  touch example.txt
+  mv example.txt renamed_example.txt
+
+TASK 2
+  
+  cat /etc/passwd
+  head -5 /etc/passwd
+  tail -5 /etc/passwd
+
+TASK 3
+  
+  grep root /etc/passwd
+
+TASK 4
+  
+  cd ..
+  zip -r test_dir.zip test_dir
+  mkdir unzipped_dir
+  unzip test_dir.zip -d unzipped_dir
+
+TASK 5
+  
+  wget https://example.com
+  root@907f53634bf9:/workspace/assignments# ls -al
+  total 24
+  drwxr-xr-x 4 root root 4096 Aug  3 05:07 .
+  drwxr-xr-x 3 root root 4096 Aug  3 04:55 ..
+  -rw-r--r-- 1 root root  559 Aug  1 09:39 index.html
+  -r--r--r-- 1 root root    0 Aug  3 05:06 secure_old.txt
+  drwxr-xr-x 2 root root 4096 Aug  3 04:56 test_dir
+  -rw-r--r-- 1 root root  352 Aug  3 05:00 test_dir.zip
+  drwxr-xr-x 3 root root 4096 Aug  3 05:02 unzipped_dir
+  root@907f53634bf9:/workspace/assignments#
+
+TASK 6
+
+  touch secure.txt
+  chmod 444 secure.txt
+
+TASK 7
+
+  export MY_VAR="Hello from Rajesh"
+  echo $MY_VAR
+  Hello from Rajesh
