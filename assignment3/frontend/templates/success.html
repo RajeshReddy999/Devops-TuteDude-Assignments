@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submission successful</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="card success">
+    <div class="checkmark" aria-hidden="true">&#10003;</div>
+    <h1>Data submitted successfully</h1>
+    <p class="intro">Your record was inserted into MongoDB Atlas.</p>
+    <a class="button-link" href="{{ url_for('home') }}">Submit another response</a>
+  </main>
+</body>
+</html>
