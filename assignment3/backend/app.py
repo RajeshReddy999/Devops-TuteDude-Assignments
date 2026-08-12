@@ -14,7 +14,7 @@ database = client["assignment3"]
 collection = database["students"]
 
 
-@app.route("/api/local")
+@app.route("/api")
 def api():
     file = open("data.json", "r")
     data = json.load(file)
