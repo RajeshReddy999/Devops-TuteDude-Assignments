@@ -1,53 +1,48 @@
-# Assignment 3: Flask, JSON file, and MongoDB Atlas
+# Assignment 3 - Flask and MongoDB Atlas
 
-This project contains two small Flask services:
+Google document:
+https://docs.google.com/document/d/1r69tcTSk6IJKDBmBriXd4nkhFH73faLbd4wIUoMKQUI/edit?tab=t.g5l68kxbyzhz
 
-- `backend` exposes `GET /api`, which reads and returns the list stored in `backend/data.json`, and `POST /submit`, which inserts validated form data into MongoDB Atlas.
-- `frontend` displays the form, redirects successful submissions to `/success`, and renders backend/database errors on the form page without redirecting.
+## What this project does
 
-## Setup
+- The backend `/api` route reads `data.json` and returns a JSON list.
+- The frontend displays a student form.
+- Submitted form data is sent to the backend and stored in MongoDB Atlas.
+- A successful submission redirects to a success page.
+- An error is displayed on the form page.
 
-Use two terminals from the `assignment3` directory.
+## MongoDB Atlas setup
 
-### 1. Configure MongoDB Atlas
+1. Create a free MongoDB Atlas cluster.
+2. Create a database user.
+3. Add your IP address in Network Access.
+4. Copy `backend/.env.example` as `backend/.env`.
+5. Put your own MongoDB connection string in `.env`.
 
-Create a database user, allow your current IP in Atlas Network Access, then copy `backend/.env.example` to `backend/.env`. Replace the placeholder URI with your Atlas connection string. Never commit `.env`.
+Do not upload the `.env` file to GitHub.
 
-### 2. Start the backend
+## Run the backend
 
 ```powershell
 cd backend
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 python app.py
 ```
 
-Verify the file-backed API at <http://127.0.0.1:9000/api>.
+Open http://127.0.0.1:9000/api to test the JSON route.
 
-### 3. Start the frontend
+## Run the frontend
+
+Open another terminal:
 
 ```powershell
 cd frontend
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 python app.py
 ```
 
-Open <http://127.0.0.1:8000>, submit the form, and confirm the new document in Atlas under `assignment3.submissions`.
+Open http://127.0.0.1:8000 and submit the form.
 
-## Tests
+## GitHub link
 
-The test suites mock MongoDB and HTTP calls, so they do not modify Atlas.
-
-```powershell
-cd backend
-pytest -q
-cd ..\frontend
-pytest -q
-```
-
-## GitHub repository
-
-<https://github.com/RajeshReddy999/Devops-TuteDude-Assignments/tree/main/assignment3>
+https://github.com/RajeshReddy999/Devops-TuteDude-Assignments/tree/main/assignment3

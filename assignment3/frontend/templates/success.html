@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Submission successful</title>
+  <title>Success</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <main class="card success">
-    <div class="checkmark" aria-hidden="true">&#10003;</div>
+  <main class="card">
     <h1>Data submitted successfully</h1>
-    <p class="intro">Your record was inserted into MongoDB Atlas.</p>
-    <a class="button-link" href="{{ url_for('home') }}">Submit another response</a>
+    <a href="/">Go back to form</a>
   </main>
 </body>
 </html>
