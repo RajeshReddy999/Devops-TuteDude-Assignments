@@ -1,5 +1,17 @@
 [
-  {"id": 1, "title": "Learn Basic Flask routing", "status": "completed"},
-  {"id": 2, "title": "Read JSON from a backend file", "status": "completed"},
-  {"id": 3, "title": "Insert form data into MongoDB Atlas", "status": "in progress"}
+  {
+    "id": 1,
+    "title": "Learn Advanced Flask Routing",
+    "status": "completed"
+  },
+  {
+    "id": 2,
+    "title": "Read JSON from a Flask API",
+    "status": "completed"
+  },
+  {
+    "id": 3,
+    "title": "Store Form Data in MongoDB",
+    "status": "in progress"
+  }
 ]
