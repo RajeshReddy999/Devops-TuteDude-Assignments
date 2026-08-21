@@ -58,7 +58,8 @@ label {
     font-size: .92rem;
 }
 
-input {
+input,
+textarea {
     width: 100%;
     padding: 12px 13px;
     border: 1px solid #b9c8d9;
@@ -66,7 +67,8 @@ input {
     font: inherit;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
     outline: 3px solid #dbe7ff;
     border-color: #2463eb;
 }

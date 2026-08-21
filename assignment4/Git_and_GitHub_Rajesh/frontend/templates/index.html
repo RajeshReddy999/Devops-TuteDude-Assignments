@@ -3,28 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Student Form</title>
+  <title>To-Do Page</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <main class="card">
-    <h1>Student Form</h1>
+    <h1>To-Do Page</h1>
 
-    {% if error %}
-      <p class="alert">Error: {{ error }}</p>
-    {% endif %}
+    <form action="http://127.0.0.1:9000/submittodoitem" method="post">
+      <label for="itemName">Item Name</label>
+      <input id="itemName" name="itemName" required>
 
-    <form action="{{ url_for('submit') }}" method="post">
-      <label for="name">Name</label>
-      <input id="name" name="name" required>
+      <label for="itemDescription">Item Description</label>
+      <textarea id="itemDescription" name="itemDescription" rows="4" required></textarea>
 
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required>
-
-      <label for="course">Course</label>
-      <input id="course" name="course" required>
-
-      <button type="submit">Submit</button>
+      <button type="submit">Add Item</button>
     </form>
   </main>
 </body>
